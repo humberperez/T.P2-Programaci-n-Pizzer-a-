@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='estilo.css')}}">
+    <title>Pizza_Ya_web</title>
+
+</head>
+
+<body>
+    <div class="contenido">
+        <div class="contenido_sub">
+            <h1>Pizzas Ya </h1> <img width="190px" alt="Logo"
+                src="https://blogger.googleusercontent.com/img/a/AVvXsEjPptroipbqYdqqTqBgxZsz23lx22q6PUgkAytcw_uzGq5hdRmOsnsvv5FMDa7pNdyLWmBA4YMk23B2-nwhNAVafRu8NS3WjCxoirwhgQ9EWScxMAvg_KHW707vMpwLOx8rej3aN6FarTsw8u6Qpbb4NbKhsqEqBY07p24LEeN1w_Dnt7hvT4F2jrSfHse-" />
+
+            <h2>Pide tus pizzas</h2>
+        </div>
+
+        <h2>Ahora de forma online y con envio !!!</h2>
+        <hr>
+        <div class="contenido_sub">
+            <h2>Nuestros Productos<h2>
+        </div>
+
+        <h2>Pizzas</h2>
+
+        <div class="producto">
+            <img width="150px" alt="Aqui habia ponido mi Muzza"
+             src="https://betos.com.ar/wp-content/uploads/2019/08/pizza-muzarella.png" />
+            <p>Muzza</p>
+        </div>
+
+        <div class="producto">
+            <img width="150px" alt="Aqui habia ponido mi Rucula y Jamon Crudo"
+             src="https://i.pinimg.com/564x/3e/81/f8/3e81f8a68c08bc6e021e9b882ffbe277.jpg" />
+            <p>Rucula y Jamon Crudo</p>
+        </div>
+
+        <div class="producto">
+            <img width="150px" alt="Aqui habia ponido mi Hawaiana" 
+             src="https://i.pinimg.com/564x/ab/c2/01/abc2017e75bab955ee63061d68f6334c.jpg" />
+            <p>Hawaiana (con ananá)</p>
+        </div>
+
+        <div class="producto">
+            <img width="150px" alt="Aqui habia ponido mi 4 Quesos"
+                src="https://i.pinimg.com/474x/f7/6b/51/f76b51c23ed5ab621fb646508cab514f.jpg" />
+            <p>4 Quesos</p>
+        </div>
+
+        <div class="producto">
+            <img width="150px" alt="Aqui habia ponido mi Pepperoni"
+                src="https://i.pinimg.com/474x/9f/07/ca/9f07ca45829cd07b6fee2c9506822496.jpg" />
+            <p>Pepperoni</p>
+        </div>
+
+        <div class="producto">
+            <img width="150px" alt="Aqui habia ponido mi Especial"
+                src="https://i.pinimg.com/474x/89/0e/c9/890ec9070fb99f5f6b7993a0c1e885af.jpg" />
+            <p>Especial</p>
+        </div>
+
+
+        <h2>Bebidas</h2>
+
+        <div class="producto">
+            <img alt="Coca"
+                src="https://i.pinimg.com/564x/d0/5f/2e/d05f2e927cfe6452a1c6c4b853ce38f3.jpg" />
+            <p>Coca Cola 2L</p>
+        </div>
+
+        <div class="producto">
+            <img  alt="Aqui habia ponido mi Fanta"
+                src="https://st3.depositphotos.com/4043829/14216/i/450/depositphotos_142161044-stock-photo-gomel-belarus-february-2017-fanta.jpg" />
+            <p>Fanta</p>
+        </div>
+
+        <div class="producto">
+            <img  alt="Aqui habia ponido mi sprite"
+                src="https://st3.depositphotos.com/4043829/14216/i/450/depositphotos_142160362-stock-photo-gomel-belarus-february-2017-the.jpg" />
+            <p>Sprite</p>
+        </div>
+
+        <div class="producto">
+            <img  alt="Aqui habia ponido mi Cermeza"
+                src="https://i.pinimg.com/564x/92/49/27/924927e949cc65ccda0e0e4198d811c7.jpg" />
+            <p>Corona</p>
+        </div>
+
+
+        
+        <h1><a href="{{ url_for('pedidos') }}">Ingrese Su Pedido</a></h1>
+
+
+    </div>
+
+</body>
+
+</html>

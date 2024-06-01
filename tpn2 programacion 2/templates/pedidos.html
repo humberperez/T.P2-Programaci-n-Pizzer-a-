@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='estilo.css')}}">
+    <title>Pizza_Ya_web</title>
+</head>
+
+<body>
+    <div class="formulario">
+        <img alt="motito"
+            src="https://blogger.googleusercontent.com/img/a/AVvXsEhO-I0apniSGmgiN26Fnp7NcuraLxChp3D8ipMZw0zA2D-i5PPffT290ou5x29Mp6EiaAJ3saEHMFog5tAPf_fCI8mWjrYmBTqcLTL6QI2q8gRMT6DckwqnRN-avhSx_h-tRvmkgfPXLBcJ4xyjVy38mwADX_WRJJrYjKERxVY9sPlMPmU00TFhwtV3J6gd" />
+        <h1>Formularios</h1>
+        <form action="{{ url_for('guardar_pedido') }}" method="post">
+            <div class="sep_formulario">
+                <label>Nombre</label>
+                <input type="text" name="nombre" required /> <br />
+
+                <label>Apellido</label>
+                <input type="text" name="apellido" required /> <br />
+
+                <label>Menu</label>
+                <input type="text" name="tipo_pizza" required /> <br />
+
+                <label>Bebidas</label>
+                <input type="text" name="bebidas" required /> <br />
+
+                <label>Contacto</label>
+                <input type="text" name="contacto" required /> <br />
+
+                <label>Direccion</label>
+                <input type="text" name="direccion" required /> <br />
+
+                <hr>
+                
+                <label>Opciones de envio</label>
+            
+                <select name="envio">
+                    <option value="Envio">Envio a Domicilio</option>
+                    <option value="No envio">Retiro en el local</option>
+                </select> <br />
+                <hr>
+                <input type="submit" value="Enviar Pedido" /> <br />
+            </div>
+        </form>
+    <h2>Pedidos</h2>
+        <h3><a href="{{ url_for('historial_pedidos') }}">Lista de pedidos</a></h3>
+    
+    </div>
+    
+</body>
+
+</html>

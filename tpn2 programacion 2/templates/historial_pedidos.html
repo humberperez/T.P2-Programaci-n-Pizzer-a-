@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+    <title>Historial de Pedidos</title>
+</head>
+
+<body>
+    <div class="formulario">
+        <h1>Historial de Pedidos</h1>
+    </div>
+    <div class="tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Tipo de Pizza</th>
+                    <th>Bebidas</th>
+                    <th>Contacto</th>
+                    <th>Dirección</th>
+                    <th>Envio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pedido in pedidos %}
+                <tr>
+                    <td>{{ pedido[0] }}</td>
+                    <td>{{ pedido[1] }}</td>
+                    <td>{{ pedido[2] }}</td>
+                    <td>{{ pedido[3] }}</td>
+                    <td>{{ pedido[4] }}</td>
+                    <td>{{ pedido[5] }}</td>
+                    <td>{{ pedido[6] }}</td>
+                    <td>{{ pedido[7] }}</td>
+                    <td>
+                        <a href="{{ url_for('editar_pedido', pedido_id=pedido[0]) }}">Editar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+    <title>Editar Pedido</title>
+</head>
+
+<body>
+    <div class="formulario">
+        <h1>Editar Pedido</h1>
+        <form action="{{ url_for('guardar_edicion_pedido', pedido_id=pedido['id']) }}" method="POST">
+
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" value="{{ pedido['nombre'] }}"><br>
+
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" id="apellido" name="apellido" value="{{ pedido['apellido'] }}"><br>
+
+            <label for="tipo_pizza">Tipo de Pizza:</label><br>
+            <input type="text" id="tipo_pizza" name="tipo_pizza" value="{{ pedido['tipo_pizza'] }}"><br>
+
+            <label for="bebidas">Bebidas:</label><br>
+            <input type="text" id="bebidas" name="bebidas" value="{{ pedido['bebidas'] }}"><br>
+
+            <label for="contacto">Contacto:</label><br>
+            <input type="text" id="contacto" name="contacto" value="{{ pedido['contacto'] }}"><br>
+
+            <label for="direccion">Dirección:</label><br>
+            <input type="text" id="direccion" name="direccion" value="{{ pedido['direccion'] }}"><br>
+
+            <label for="envio">Método de Envío:</label><br>
+            <input type="text" id="envio" name="envio" value="{{ pedido['envio'] }}"><br><br>
+
+            <input type="submit" value="Guardar Cambios">
+        </form>
+</body>
+</div>
+
+</html>
